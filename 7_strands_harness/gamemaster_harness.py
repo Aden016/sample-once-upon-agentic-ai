@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from tinydb import TinyDB, Query
 from typing import List
 from strands.vended_tools import make_a2a_client
-# TODO: Step 1 - Import create_harness from strands_harness
+from strands_harness import create_harness
 
 app = FastAPI(title="D&D Game Master API (Strands harness)")
 app.add_middleware(
@@ -46,12 +46,12 @@ a2a_client = make_a2a_client(allowed_endpoints=[
 ])
 
 agent = create_harness(
-    # TODO: Step 1 - Pass the INSTRUCTIONS to the harness
-    # TODO: Step 2 - Add the dice MCP server {"dice": {"url": "http://127.0.0.1:8002/mcp"}} to mcp_servers
-    # TODO: Step 3 - Add the a2a_client tool to the harness
-    # TODO: Step 4 - Disable the built-in tools
-    # TODO: Step 5 - Name the session "dnd-campaign"
-    # TODO: Step 6 - Force the response to use the StoryOutput model
+    instructions=INSTRUCTIONS,
+    mcp_servers={"dice": {"url": "http://127.0.0.1:8002/mcp"}},
+    tools=[a2a_client],
+    disable_built_in_tools=True,
+    session_name="dnd-campaign",
+    output_model=StoryOutput
 )
 
 @app.get("/health")

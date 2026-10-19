@@ -1,0 +1,114 @@
+{
+  "name": "sample-once-upon-agentic-ai",
+  "id": "sample-once-upon-agentic-ai",
+  "description": "Complete all TODOs in the repository to make each chapter runnable",
+  "captainSessionId": "session-b9dfa178-9fed-467d-a230-4ce9ae49f21c",
+  "createdAt": 1792403102362,
+  "members": [
+    {
+      "id": "845a0851-2fa6-4809-b969-f0f0e76e51f2",
+      "name": "harness-engineer",
+      "role": "engineer",
+      "provider": "our-free-model",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "reasoningEffort": "high",
+      "joinedAt": 1792403124438,
+      "status": "idle"
+    },
+    {
+      "id": "12fec2d2-bc67-4999-9040-a4f23191d5fd",
+      "name": "rules-agent-dev",
+      "role": "engineer",
+      "provider": "our-free-model",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "reasoningEffort": "high",
+      "joinedAt": 1792403128757,
+      "status": "idle"
+    },
+    {
+      "id": "b4c0ed04-c222-42ef-ad9b-5ffa347cb373",
+      "name": "character-agent-dev",
+      "role": "engineer",
+      "provider": "our-free-model",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "reasoningEffort": "high",
+      "joinedAt": 1792403132634,
+      "status": "idle"
+    },
+    {
+      "id": "1a4b3445-5de8-422d-8a8a-f1b01cadfe7f",
+      "name": "gamemaster-orchestrator-dev",
+      "role": "engineer",
+      "provider": "our-free-model",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "reasoningEffort": "high",
+      "joinedAt": 1792403148102,
+      "status": "idle"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "subject": "Complete TODOs in gamemaster_harness.py for chapter 7",
+      "description": "Read the file 7_strands_harness/gamemaster_harness.py and complete all TODOs:\n# TODO: Step 1 - Import create_harness from strands_harness\n# TODO: Step 1 - Pass the INSTRUCTIONS to the harness\n# TODO: Step 2 - Add the dice MCP server {\"dice\": {\"url\": \"http://127.0.0.1:8002/mcp\"}} to mcp_servers\n# TODO: Step 3 - Add the a2a_client tool to the harness\n# TODO: Step 4 - Disable the built-in tools\n# TODO: Step 5 - Name the session \"dnd-campaign\"\n# TODO: Step 6 - Force the response to use the StoryOutput model\n\nYou should:\n1. Import create_harness from strands_harness\n2. Define INSTRUCTIONS (likely from the rules agent or similar)\n3. Create the harness with proper mcp_servers configuration\n4. Add a2a_client tool\n5. Disable built-in tools\n6. Set session name\n7. Force response to use StoryOutput model\n\nWrite the completed code back to the same file.",
+      "status": "completed",
+      "assignee": "captain",
+      "dependencies": [],
+      "attempt": 2,
+      "createdAt": 1792403162715,
+      "updatedAt": 1792403322063,
+      "kind": "work",
+      "reassigning": false,
+      "attemptId": "9278a554-8f95-4fd0-8805-151e63b5341a",
+      "output": "Completed all TODOs in gamemaster_harness.py:\n1. Imported create_harness from strands_harness\n2. Passed INSTRUCTIONS to the harness\n3. Added the dice MCP server to mcp_servers\n4. Added the a2a_client tool to the harness\n5. Disabled the built-in tools\n6. Named the session \"dnd-campaign\"\n7. Forced the response to use the StoryOutput model"
+    },
+    {
+      "id": "t2",
+      "subject": "Complete TODOs in rules_agent.py for chapter 5 A2A integration",
+      "description": "Read the file 5_a2a_integration/agents/rules_agent/rules_agent.py and complete all TODOs:\n\n# TODO: Step 1 - Add the query_dnd_rules tool to the agent\n# TODO: Step 2 - Add the name \"Rules Agent\" to the agent\n# TODO: Step 3 - Add the description \"D&D 5e rules lookup: fast, page-referenced answers from the Basic Rules knowledge base.\" to the agent\n# TODO: Step 4 - Create an A2AServer with the create_agent factory on port 8000\n# TODO: Step 5 - Start the A2A server\n\nYou should:\n1. Import query_dnd_rules from utils.create_knowledge_base (or wherever it is defined)\n2. Add the tool to the agent\n3. Set the agent name\n4. Set the agent description\n5. Create an A2AServer with the agent factory on port 8000\n6. Start the server\n\nWrite the completed code back to the same file.",
+      "status": "completed",
+      "assignee": "captain",
+      "dependencies": [],
+      "attempt": 2,
+      "createdAt": 1792403184433,
+      "updatedAt": 1792403449178,
+      "kind": "work",
+      "reassigning": false,
+      "attemptId": "52a64778-5d04-4169-a0c5-4026d8d6b172",
+      "output": "Completed all TODOs in rules_agent.py:\n1. Added the query_dnd_rules tool to the agent\n2. Set agent name to \"Rules Agent\"\n3. Set agent description to \"D&D 5e rules lookup: fast, page-referenced answers from the Basic Rules knowledge base.\"\n4. Created A2AServer with create_agent factory on port 8000\n5. Added server startup code with proper error handling"
+    },
+    {
+      "id": "t3",
+      "subject": "Complete TODOs in character_agent.py for chapter 5 A2A integration",
+      "description": "Read the file 5_a2a_integration/agents/character_agent/character_agent.py and complete all TODOs:\n\n# TODO: Step 1 - Add the create_character, find_character_by_name and list_all_characters tools to the agent\n# TODO: Step 2 - Add the name \"Character Agent\" to the agent\n# TODO: Step 3 - Add the description \"D&D character management: creates characters (ability scores rolled 4d6 drop lowest), stores them, finds and lists them.\" to the agent\n# TODO: Step 4 - Create an A2AServer with the create_agent factory on port 8001\n# TODO: Step 5 - Start the A2A server\n\nYou should:\n1. Import the necessary tools (likely from utils.create_knowledge_base or defined in the file)\n2. Add the tools to the agent\n3. Set the agent name\n4. Set the agent description\n5. Create an A2AServer with the agent factory on port 8001\n6. Start the server\n\nWrite the completed code back to the same file.",
+      "status": "completed",
+      "assignee": "character-agent-dev",
+      "dependencies": [],
+      "attempt": 1,
+      "createdAt": 1792403205446,
+      "updatedAt": 1792403340812,
+      "kind": "work",
+      "attemptId": "f7da680b-1c7d-458b-acd9-a55fbf37309c",
+      "reassigning": false,
+      "output": "Completed all TODOs in character_agent.py for chapter 5 A2A integration:\n1. Added create_character, find_character_by_name, and list_all_characters tools to the agent\n2. Set agent name to \"Character Agent\"\n3. Set agent description to \"D&D character management: creates characters (ability scores rolled 4d6 drop lowest), stores them, finds and lists them.\"\n4. Created A2AServer with create_agent factory on port 8001\n5. Added server startup code with proper error handling"
+    },
+    {
+      "id": "t4",
+      "subject": "Complete TODOs in gamemaster_orchestrator.py for chapter 5 A2A integration",
+      "description": "Read the file 5_a2a_integration/agents/gamemaster_orchestrator/gamemaster_orchestrator.py and complete all TODOs:\n\n# TODO: Step 1 - Create a streamable http MCPClient connecting to \"http://localhost:8002/mcp\"\n# TODO: Step 2 - Create the A2A client tool with make_a2a_client and the allowed agent endpoints\n# TODO: Step 3 - Add the mcp_client and a2a_client tools to the agent\n# TODO: Step 4 - Force the response to use the StoryOutput model\n\nYou should:\n1. Import necessary modules (MCPClient, streamablehttp_client, make_a2a_client)\n2. Create the MCP client connecting to the dice server\n3. Create A2A client tools for rules agent and character agent (on ports 8000 and 8001)\n4. Add both MCP and A2A client tools to the agent\n5. Force the response to use the StoryOutput model (likely need to import and use it)\n\nWrite the completed code back to the same file.",
+      "status": "completed",
+      "assignee": "captain",
+      "dependencies": [],
+      "attempt": 2,
+      "createdAt": 1792403223155,
+      "updatedAt": 1792403525093,
+      "kind": "work",
+      "reassigning": false,
+      "attemptId": "6d29a128-af53-49b0-962f-2e09c1909c98",
+      "output": "Completed all TODOs in gamemaster_orchestrator.py:\n1. Created a streamable http MCPClient connecting to \"http://localhost:8002/mcp\"\n2. Created the A2A client tool with make_a2a_client and the allowed agent endpoints (Rules Agent on 8000, Character Agent on 8001)\n3. Added the mcp_client and a2a_client tools to the agent\n4. Forced the response to use the StoryOutput model"
+    }
+  ],
+  "taskSeq": 4,
+  "phase": "running",
+  "approvedAt": 1792403227446
+}
